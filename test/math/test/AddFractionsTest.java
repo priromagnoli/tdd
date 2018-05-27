@@ -33,4 +33,11 @@ public class AddFractionsTest {
 
         assertEquals(7, sum.intValue());
     }
+
+    @Test
+    public void negativeInputsAndNegativeOutputs() {
+        Fraction sum = new Fraction(-3).plus(new Fraction(1));
+
+        assertEquals(-2, sum.intValue());
+    }
 }
