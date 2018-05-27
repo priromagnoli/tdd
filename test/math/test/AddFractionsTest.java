@@ -12,4 +12,11 @@ public class AddFractionsTest {
 
         assertEquals(0, sum.intValue());
     }
+
+    @Test
+    public void notZeroPlusZero() {
+        Fraction sum = new Fraction(3).plus(new Fraction(0));
+
+        assertEquals(3, sum.intValue());
+    }
 }
