@@ -40,4 +40,12 @@ public class AddFractionsTest {
 
         assertEquals(-2, sum.intValue());
     }
+
+    @Test
+    public void nonTrivialDenominator() {
+        Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
+
+        assertEquals(3, sum.getNumerator());
+        assertEquals(5, sum.denominator());
+    }
 }
