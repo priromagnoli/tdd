@@ -1,18 +1,21 @@
 package math;
 
 public class Fraction {
+    private final int denominator;
     private int integerValue;
 
     public Fraction(int integerValue) {
         this.integerValue = integerValue;
+        this.denominator = 1;
     }
 
     public Fraction(int numerator, int denominator) {
-
+        this.integerValue = numerator;
+        this.denominator = denominator;
     }
 
     public Fraction plus(Fraction that) {
-        return new Fraction(this.integerValue + that.integerValue);
+        return new Fraction(this.integerValue + that.integerValue, that.denominator);
     }
 
     public int intValue() {
@@ -23,7 +26,7 @@ public class Fraction {
         return 3;
     }
 
-    public int denominator() {
-        return 5;
+    public int getDenominator() {
+        return denominator;
     }
 }
