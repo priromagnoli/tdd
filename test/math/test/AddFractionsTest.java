@@ -10,21 +10,21 @@ public class AddFractionsTest {
     public void zeroPlusZero() {
         Fraction sum = new Fraction(0).plus(new Fraction(0));
 
-        assertEquals(0, sum.intValue());
+        assertEquals(new Fraction(0), sum);
     }
 
     @Test
     public void notZeroPlusZero() {
         Fraction sum = new Fraction(3).plus(new Fraction(0));
 
-        assertEquals(3, sum.intValue());
+        assertEquals(new Fraction(3), sum);
     }
 
     @Test
     public void zeroPlusNotZero() {
         Fraction sum = new Fraction(0).plus(new Fraction(5));
 
-        assertEquals(5, sum.intValue());
+        assertEquals(new Fraction(5), sum);
     }
 
     @Test
