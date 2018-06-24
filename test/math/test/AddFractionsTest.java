@@ -30,8 +30,7 @@ public class AddFractionsTest {
     @Test
     public void nonNegativeNonZeroOperands() {
         Fraction sum = new Fraction(3).plus(new Fraction(4));
-
-        assertEquals(7, sum.intValue());
+        assertEquals(new Fraction(7), sum);
     }
 
     @Test
