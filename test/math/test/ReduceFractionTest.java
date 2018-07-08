@@ -15,4 +15,9 @@ public class ReduceFractionTest {
     public void reduceNotToWholeNumber() {
         assertEquals(new Fraction(3, 4), new Fraction(6, 8));
     }
+
+    @Test
+    public void reduceToWholeNumber() {
+        assertEquals(new Fraction(6), new Fraction(24, 4));
+    }
 }
