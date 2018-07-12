@@ -1,7 +1,6 @@
 package math.test;
 
 import math.Fraction;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -75,7 +74,6 @@ public class AddFractionsTest {
     }
 
     @Test
-    @Ignore("Constructor doesn't yet avoid negative denominators")
     public void negativeSignsEverywhere() {
         assertEquals(new Fraction(1, 2), new Fraction(1, -4).plus(new Fraction(-3, -4)));
     }
