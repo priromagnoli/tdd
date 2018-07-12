@@ -38,4 +38,12 @@ public class GreatestCommonDivisorTest {
         assertEquals(4, NumberTheory.gcd(-24, 28));
         assertEquals(4, NumberTheory.gcd(24, -28));
     }
+
+    @Test
+    public void zero() {
+        assertEquals(1, NumberTheory.gcd(1, 0));
+        assertEquals(5, NumberTheory.gcd(0, 5));
+        assertEquals(0, NumberTheory.gcd(0, 0));
+
+    }
 }
