@@ -35,4 +35,10 @@ public class MultiplyFractionsTest {
     public void negativeTimesNegative() {
         assertEquals(new Fraction(6), new Fraction(-3).times(new Fraction(-2)));
     }
+
+    @Test
+    public void oneAsDenominator() {
+        Fraction actualFraction = new Fraction(2, 1).times(new Fraction(3, 1));
+        assertEquals(new Fraction(6), actualFraction);
+    }
 }
