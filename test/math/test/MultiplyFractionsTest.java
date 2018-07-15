@@ -41,4 +41,10 @@ public class MultiplyFractionsTest {
         Fraction actualFraction = new Fraction(2, 1).times(new Fraction(3, 1));
         assertEquals(new Fraction(6), actualFraction);
     }
+
+    @Test
+    public void oneDenominatorDifferentFromOne() {
+        Fraction actualFraction = new Fraction(2, 1).times(new Fraction(3, 2));
+        assertEquals(new Fraction(6, 2), actualFraction);
+    }
 }
