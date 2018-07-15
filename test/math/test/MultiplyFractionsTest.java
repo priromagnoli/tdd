@@ -47,4 +47,10 @@ public class MultiplyFractionsTest {
         Fraction actualFraction = new Fraction(3, 2).times(new Fraction(7, 3));
         assertEquals(new Fraction(21, 6), actualFraction);
     }
+
+    @Test
+    public void simplifyResults() {
+        Fraction actualFraction = new Fraction(3, 2).times(new Fraction(2, 3));
+        assertEquals(new Fraction(1), actualFraction);
+    }
 }
