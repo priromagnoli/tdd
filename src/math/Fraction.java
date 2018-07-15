@@ -42,6 +42,6 @@ public class Fraction {
     }
 
     public Fraction times(Fraction fraction) {
-        return new Fraction(0);
+        return new Fraction(fraction.numerator);
     }
 }

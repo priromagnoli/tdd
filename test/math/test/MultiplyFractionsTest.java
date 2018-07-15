@@ -10,4 +10,11 @@ public class MultiplyFractionsTest {
     public void zeroTimesZero() {
         assertEquals(new Fraction(0), new Fraction(0).times(new Fraction(0)));
     }
+
+    @Test
+    public void notZeroTimesZero() {
+        assertEquals(new Fraction(0), new Fraction(3).times(new Fraction(0)));
+    }
+
+
 }
