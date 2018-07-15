@@ -40,4 +40,8 @@ public class Fraction {
     public String toString() {
         return String.format("%d/%d", numerator, denominator);
     }
+
+    public Fraction times(Fraction fraction) {
+        return new Fraction(0);
+    }
 }
