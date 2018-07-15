@@ -41,7 +41,7 @@ public class Fraction {
         return String.format("%d/%d", numerator, denominator);
     }
 
-    public Fraction times(Fraction fraction) {
-        return new Fraction(fraction.numerator);
+    public Fraction times(Fraction that) {
+        return new Fraction(this.numerator * that.numerator);
     }
 }

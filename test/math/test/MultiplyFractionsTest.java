@@ -16,5 +16,8 @@ public class MultiplyFractionsTest {
         assertEquals(new Fraction(0), new Fraction(3).times(new Fraction(0)));
     }
 
-
+    @Test
+    public void zeroTimesNotZero() {
+        assertEquals(new Fraction(0), new Fraction(0).times(new Fraction(5)));
+    }
 }
