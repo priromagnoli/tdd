@@ -25,4 +25,14 @@ public class MultiplyFractionsTest {
     public void notZeroTimesNotZero() {
         assertEquals(new Fraction(12), new Fraction(3).times(new Fraction(4)));
     }
+
+    @Test
+    public void negativeTimesNonNegative() {
+        assertEquals(new Fraction(-6), new Fraction(-3).times(new Fraction(2)));
+    }
+
+    @Test
+    public void negativeTimesNegative() {
+        assertEquals(new Fraction(6), new Fraction(-3).times(new Fraction(-2)));
+    }
 }
