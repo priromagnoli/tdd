@@ -10,4 +10,9 @@ public class SubtractFractionsTest {
     public void zeroMinusZero() {
         assertEquals(new Fraction(0), new Fraction(0).minus(new Fraction(0)));
     }
+
+    @Test
+    public void notZeroMinusZero() {
+        assertEquals(new Fraction(3), new Fraction(3).minus(new Fraction(0)));
+    }
 }
