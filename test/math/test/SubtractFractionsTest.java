@@ -20,4 +20,10 @@ public class SubtractFractionsTest {
     public void zeroMinusNotZero() {
         assertEquals(new Fraction(-3), new Fraction(0).minus(new Fraction(3)));
     }
+
+    @Test
+    public void oneAsDenominator() {
+        Fraction actualFraction = new Fraction(3, 1).minus(new Fraction(2, 1));
+        assertEquals(new Fraction(1), actualFraction);
+    }
 }
