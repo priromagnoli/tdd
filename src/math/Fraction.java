@@ -45,7 +45,7 @@ public class Fraction {
         return new Fraction(this.numerator * that.numerator, this.denominator * that.denominator);
     }
 
-    public Fraction minus(Fraction fraction) {
-        return new Fraction(this.numerator);
+    public Fraction minus(Fraction that) {
+        return new Fraction(this.numerator - that.numerator);
     }
 }
