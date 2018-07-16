@@ -65,4 +65,10 @@ public class MultiplyFractionsTest {
         Fraction actualFraction = new Fraction(1, 4).times(new Fraction(3, -4));
         assertEquals(new Fraction(3, -16), actualFraction);
     }
+
+    @Test
+    public void negativeEverywhere() {
+        Fraction actualFraction = new Fraction(1, -4).times(new Fraction(-3, -4));
+        assertEquals(new Fraction(-3, 16), actualFraction);
+    }
 }
