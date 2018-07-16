@@ -53,4 +53,10 @@ public class MultiplyFractionsTest {
         Fraction actualFraction = new Fraction(3, 2).times(new Fraction(2, 3));
         assertEquals(new Fraction(1), actualFraction);
     }
+
+    @Test
+    public void negativeNumerator() {
+        Fraction actualFraction = new Fraction(-1, 4).times(new Fraction(3, 4));
+        assertEquals(new Fraction(-3, 16), actualFraction);
+    }
 }
