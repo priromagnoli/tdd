@@ -34,7 +34,13 @@ public class SubtractFractionsTest {
     }
 
     @Test
-    public void differentDenominators() {
+    public void differentDenominatorsPositiveResult() {
+        Fraction actualFraction = new Fraction(4, 5).minus(new Fraction(9, 12));
+        assertEquals(new Fraction(1, 20), actualFraction);
+    }
+
+    @Test
+    public void differentDenominatorsNegativeResult() {
         Fraction actualFraction = new Fraction(7, 3).minus(new Fraction(5, 2));
         assertEquals(new Fraction(-1, 6), actualFraction);
     }
