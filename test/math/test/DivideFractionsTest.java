@@ -20,4 +20,9 @@ public class DivideFractionsTest {
     public void notZeroDividedByNotZero() {
         assertEquals(new Fraction(2), new Fraction(4).dividedBy(new Fraction(2)));
     }
+
+    @Test
+    public void negativeNumerator() {
+        assertEquals(new Fraction(2), new Fraction(-4).dividedBy(new Fraction(-2)));
+    }
 }
