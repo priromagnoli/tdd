@@ -1,6 +1,7 @@
 package math.test;
 
 import math.Fraction;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -34,5 +35,32 @@ public class DivideFractionsTest {
     @Test (expected = ArithmeticException.class)
     public void zeroDividedByZero() {
         new Fraction(0).dividedBy(new Fraction(0));
+    }
+
+    @Test
+    @Ignore
+    public void nonFractionResultsInFraction() {
+        Fraction actualFraction = new Fraction(2).dividedBy(new Fraction(4));
+        assertEquals(new Fraction(1, 2), actualFraction);
+    }
+
+    @Test
+    public void firstDenominatorAndSecondNumeratorEqualOne() {
+
+    }
+
+    @Test
+    public void allNumeratorsAndDenominatorsDifferentFromOne() {
+
+    }
+
+    @Test
+    public void oneNegativeDenominator() {
+
+    }
+
+    @Test
+    public void simplifyResults() {
+
     }
 }
