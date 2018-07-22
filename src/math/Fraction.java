@@ -52,4 +52,8 @@ public class Fraction {
         int resultNumerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
         return new Fraction(resultNumerator, lcm);
     }
+
+    public Fraction dividedBy(Fraction fraction) {
+        return new Fraction(1);
+    }
 }
