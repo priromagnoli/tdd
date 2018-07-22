@@ -46,6 +46,6 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction that) {
-        return new Fraction(this.numerator - that.numerator);
+        return new Fraction(this.numerator - that.numerator, denominator);
     }
 }
