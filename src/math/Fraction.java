@@ -53,7 +53,11 @@ public class Fraction {
         return new Fraction(resultNumerator, lcm);
     }
 
-    public Fraction dividedBy(Fraction fraction) {
-        return new Fraction(1);
+    public Fraction dividedBy(Fraction that) {
+        if (this.numerator == 0) {
+            return new Fraction(0);
+        } else {
+            return new Fraction(1);
+        }
     }
 }
