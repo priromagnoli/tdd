@@ -48,12 +48,8 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction that) {
-        if (this.denominator == that.denominator) {
-            return new Fraction(this.numerator - that.numerator, denominator);
-        } else {
-            int lcm = lcm(this.denominator, that.denominator);
-            int numerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
-            return new Fraction(numerator, lcm);
-        }
+        int lcm = lcm(this.denominator, that.denominator);
+        int resultNumerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
+        return new Fraction(resultNumerator, lcm);
     }
 }
