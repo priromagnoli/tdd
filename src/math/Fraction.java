@@ -54,10 +54,6 @@ public class Fraction {
     }
 
     public Fraction dividedBy(Fraction that) {
-        if (this.numerator == 0) {
-            return new Fraction(0);
-        } else {
-            return new Fraction(this.numerator / that.numerator);
-        }
+        return new Fraction(this.numerator / that.numerator);
     }
 }
