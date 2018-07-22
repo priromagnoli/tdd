@@ -25,4 +25,9 @@ public class DivideFractionsTest {
     public void negativeNumerator() {
         assertEquals(new Fraction(2), new Fraction(-4).dividedBy(new Fraction(-2)));
     }
+
+    @Test (expected = ArithmeticException.class)
+    public void notZeroDividedByZero() {
+        new Fraction(2).dividedBy(new Fraction(0));
+    }
 }
