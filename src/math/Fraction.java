@@ -57,7 +57,7 @@ public class Fraction {
         if (this.numerator == 0) {
             return new Fraction(0);
         } else {
-            return new Fraction(1);
+            return new Fraction(this.numerator / that.numerator);
         }
     }
 }
