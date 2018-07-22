@@ -1,5 +1,7 @@
 package math;
 
+import static math.NumberTheory.lcm;
+
 public class Fraction {
     private final int denominator;
     private final int numerator;
@@ -46,6 +48,12 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction that) {
-        return new Fraction(this.numerator - that.numerator, denominator);
+        if (this.denominator == that.denominator) {
+            return new Fraction(this.numerator - that.numerator, denominator);
+        } else {
+            int lcm = lcm(this.denominator, that.denominator);
+            int numerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
+            return new Fraction(numerator, lcm);
+        }
     }
 }

@@ -1,7 +1,6 @@
 package math.test;
 
 import math.Fraction;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -35,7 +34,6 @@ public class SubtractFractionsTest {
     }
 
     @Test
-    @Ignore
     public void differentDenominators() {
         Fraction actualFraction = new Fraction(7, 3).minus(new Fraction(5, 2));
         assertEquals(new Fraction(-1, 6), actualFraction);
