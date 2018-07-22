@@ -30,4 +30,9 @@ public class DivideFractionsTest {
     public void notZeroDividedByZero() {
         new Fraction(2).dividedBy(new Fraction(0));
     }
+
+    @Test (expected = ArithmeticException.class)
+    public void zeroDividedByZero() {
+        new Fraction(0).dividedBy(new Fraction(0));
+    }
 }
