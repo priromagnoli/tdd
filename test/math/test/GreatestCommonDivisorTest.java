@@ -44,6 +44,5 @@ public class GreatestCommonDivisorTest {
         assertEquals(1, NumberTheory.gcd(1, 0));
         assertEquals(5, NumberTheory.gcd(0, 5));
         assertEquals(0, NumberTheory.gcd(0, 0));
-
     }
 }
