@@ -45,22 +45,30 @@ public class DivideFractionsTest {
     }
 
     @Test
+    @Ignore
     public void firstDenominatorAndSecondNumeratorEqualOne() {
-
+        Fraction actualFraction = new Fraction(3, 1).dividedBy(new Fraction(1, 2));
+        assertEquals(new Fraction(6), actualFraction);
     }
 
     @Test
+    @Ignore
     public void allNumeratorsAndDenominatorsDifferentFromOne() {
-
+        Fraction actualFraction = new Fraction(10, 5).dividedBy(new Fraction(2, 8));
+        assertEquals(new Fraction(8), actualFraction);
     }
 
     @Test
+    @Ignore
     public void oneNegativeDenominator() {
-
+        Fraction actualFraction = new Fraction(10, -5).dividedBy(new Fraction(2, 8));
+        assertEquals(new Fraction(-8), actualFraction);
     }
 
     @Test
+    @Ignore
     public void simplifyResults() {
-
+        Fraction actualFraction = new Fraction(3, 3).dividedBy(new Fraction(9, 6));
+        assertEquals(new Fraction(2, 3), actualFraction);
     }
 }
