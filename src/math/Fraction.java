@@ -19,8 +19,26 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction that) {
-        return new Fraction(this.numerator * that.denominator + this.denominator * that.numerator,
-                this.denominator * that.denominator);
+        int numerator = this.numerator * that.denominator + this.denominator * that.numerator;
+        int denominator = this.denominator * that.denominator;
+        return new Fraction(numerator, denominator);
+    }
+
+    public Fraction times(Fraction that) {
+        return new Fraction(this.numerator * that.numerator, this.denominator * that.denominator);
+    }
+
+    public Fraction minus(Fraction that) {
+        int lcm = lcm(this.denominator, that.denominator);
+        int resultNumerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
+        return new Fraction(resultNumerator, lcm);
+    }
+
+    public Fraction dividedBy(Fraction that) {
+        if (that.numerator == 0){
+            throw new ArithmeticException();
+        }
+        return new Fraction(this.numerator * that.denominator, this.denominator * that.numerator);
     }
 
     @Override
@@ -41,22 +59,5 @@ public class Fraction {
     @Override
     public String toString() {
         return String.format("%d/%d", numerator, denominator);
-    }
-
-    public Fraction times(Fraction that) {
-        return new Fraction(this.numerator * that.numerator, this.denominator * that.denominator);
-    }
-
-    public Fraction minus(Fraction that) {
-        int lcm = lcm(this.denominator, that.denominator);
-        int resultNumerator = (lcm / this.denominator * this.numerator) - (lcm / that.denominator * that.numerator);
-        return new Fraction(resultNumerator, lcm);
-    }
-
-    public Fraction dividedBy(Fraction that) {
-        if (that.numerator == 0){
-            throw new ArithmeticException();
-        }
-        return new Fraction(this.numerator * that.denominator, this.denominator * that.numerator);
     }
 }
